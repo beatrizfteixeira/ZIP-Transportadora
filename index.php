@@ -16,7 +16,7 @@
         ZIP Transportadora
     </nav>
 <div class="container">
-    <a href="new.php" class="btn btn-dark m-3">Adicionar novo cliente</a> <br>
+    <a href="adicionar-cli.php" class="btn btn-dark m-3">Adicionar novo cliente</a> <br>
 </div>
     
 <table class="table table-hover text-center">
@@ -39,6 +39,7 @@
         include "config.php";
         $sql = "SELECT * from cliente";
         $result = mysqli_query($conn, $sql);
+        
         while ($row = mysqli_fetch_assoc($result)){
 
     ?>
@@ -53,8 +54,8 @@
       <td><?php echo $row['RemOuDest'] ?></td>
       <td><?php echo $row['CEP'] ?></td>
       
-      <td> <a href="edit.php" class="btn btn-primary"> EDITAR</a> 
-      <a href="delete.php" class="btn btn-primary"> EXCLUIR</a>  
+      <td> <a href="editar.php?cpf=<?php echo $row['CPF']?>"class="btn btn-primary"> EDITAR</a> 
+      <a href="deletar.php?cpf=<?php echo $row['CPF']?>" class="btn btn-primary"> EXCLUIR</a>  
     </td>   
     </tr>
     <?php
