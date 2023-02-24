@@ -81,9 +81,9 @@ if(isset($_POST['submit'])) {
                 <br><label for="numero">CEP:</label><br>
                 <input type="text" id="cep" name="cep" value="<?php echo $row['CEP']?>">
                 <div class = "form-group mb-1">
-                    <input type="radio" class="form-check-input" name="remoudest" id="r" value="R" <?php echo ($row['RemOuDest']=='R')? "checked":""; ?>></input>
+                    <input type="radio" class="form-check-input" name="remoudest" id="r" value="R" <?php echo ($row['RemOuDest']=='R')? "":""; ?>></input>
                     <label for="R"class="form-input-label">Remetente</label> &nbsp;
-                    <input type="radio" class="form-check-input" name="remoudest" id="d" value="D"><?php echo ($row['RemOuDest']=='D')? "checked":""; ?></input>
+                    <input type="radio" class="form-check-input" name="remoudest" id="d" value="D"><?php echo ($row['RemOuDest']=='D')? "":""; ?></input>
                     <label for="D"class="form-input-label">Destinatário</label>&nbsp;
                 </div>
         </div>
